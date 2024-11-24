@@ -1,8 +1,7 @@
 
-# PANDJO
+# ANDJO
 
-An web application for learning foreign langues through  flashcards and quizes. Generateing flashcards and quizes by using AI.
-
+An web application for learning foreign languages through flashcards and quizzes. Generating flashcards and quizzes by using AI.
 
 ## API Reference
 
