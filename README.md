@@ -28,10 +28,10 @@ An web application for learning foreign languages through flashcards and quizzes
 
 ## Deployment
 
-To deploy this project run
+To deploy this project run in project's directory
 
 ```bash
-  npm run deploy
+  ./mvnw spring-boot:run
 ```
 
 ## Color Reference
@@ -45,12 +45,6 @@ To deploy this project run
 
 
 ## Features
-
-- Light/dark mode toggle
-- Live previews
-- Fullscreen mode
-- Cross platform
-
 
 ## Leitner system
 https://en.wikipedia.org/wiki/Leitner_system
