@@ -3,6 +3,15 @@
 
 An web application for learning foreign languages through flashcards and quizzes. Generating flashcards and quizzes by using AI.
 
+# Dependencies
+- Spring Boot DevTools
+- Lombok - reduces boilerplate code
+- Spring Web - HTTP client
+- Thymeleaf - template engine
+- Spring Data JPA - API for connecting and executing queries on a database
+- H2 Database
+- Validation
+
 ## API Reference
 
 #### Generate a flashcard
@@ -19,10 +28,10 @@ An web application for learning foreign languages through flashcards and quizzes
 
 ## Deployment
 
-To deploy this project run
+To deploy this project run in project's directory
 
 ```bash
-  npm run deploy
+  ./mvnw spring-boot:run
 ```
 
 ## Color Reference
@@ -36,12 +45,6 @@ To deploy this project run
 
 
 ## Features
-
-- Light/dark mode toggle
-- Live previews
-- Fullscreen mode
-- Cross platform
-
 
 ## Leitner system
 https://en.wikipedia.org/wiki/Leitner_system
