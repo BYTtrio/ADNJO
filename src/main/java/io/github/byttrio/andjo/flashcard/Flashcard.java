@@ -2,14 +2,14 @@ package io.github.byttrio.andjo.flashcard;
 
 import io.github.byttrio.andjo.set.Set;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.UUID;
 
 @Entity
-@Getter
-@Setter
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Flashcard {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
