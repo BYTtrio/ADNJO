@@ -1,6 +1,10 @@
 package io.github.byttrio.andjo.flashcard;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface FlashcardRepository extends JpaRepository<Flashcard, Long> {
+import java.util.UUID;
+
+@Repository
+public interface FlashcardRepository extends JpaRepository<Flashcard, UUID> {
 }
