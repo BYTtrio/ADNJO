@@ -2,6 +2,7 @@ package io.github.byttrio.andjo.flashcard;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,10 +10,10 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/api/flashcards")
+@CrossOrigin
 @RequiredArgsConstructor
+@RequestMapping("/api/flashcards")
 public class FlashcardController {
-    @Autowired
     private final FlashcardService flashcardService;
 
     @GetMapping
