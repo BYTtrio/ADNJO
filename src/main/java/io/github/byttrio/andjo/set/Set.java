@@ -17,6 +17,6 @@ public class Set {
     private String name;
     private String description;
 
-    @OneToMany(mappedBy = "set")
-    private java.util.Set<Flashcard> flashcards;
+    //@OneToMany(mappedBy = "set")
+    //private java.util.Set<Flashcard> flashcards;
 }

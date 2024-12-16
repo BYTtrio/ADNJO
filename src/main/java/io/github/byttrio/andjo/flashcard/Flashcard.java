@@ -17,7 +17,7 @@ public class Flashcard {
     private String term;
     private String definition;
 
-    @ManyToOne
-    @JoinColumn(name = "set_id")
-    private Set set;
+    //@ManyToOne
+    //@JoinColumn(name = "set_id")
+    //private Set set;
 }
