@@ -1,7 +1,6 @@
 package io.github.byttrio.andjo.flashcard;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
