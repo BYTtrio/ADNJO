@@ -15,17 +15,19 @@ public class FlashcardService {
     public List<Flashcard> getAllFlashcards() {
         return flashcardRepository.findAll();
     }
-
     public Flashcard getFlashcardById(final UUID id) {
-        return flashcardRepository.getReferenceById(id);
+        return flashcardRepository.findById(id).orElse(null);
     }
 
-    public HttpStatus createFlashcards(final List<Flashcard> flashcardList) {
-        flashcardRepository.saveAll(flashcardList);
-        return HttpStatus.CREATED;
+    public List<Flashcard> createFlashcards(final List<Flashcard> flashcardList) {
+        return flashcardRepository.saveAll(flashcardList);
     }
 
     public void deleteFlashcard(final UUID id) {
         flashcardRepository.deleteById(id);
+    }
+
+    public Flashcard updateFlashcard(Flashcard flashcardRequest) {
+        return flashcardRepository.save(flashcardRequest);
     }
 }

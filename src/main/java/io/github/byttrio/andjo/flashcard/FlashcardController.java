@@ -1,7 +1,6 @@
 package io.github.byttrio.andjo.flashcard;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,7 +24,7 @@ public class FlashcardController {
     }
 
     @PostMapping
-    public HttpStatus createFlashcard(@RequestBody List<Flashcard> flashcardList) {
+    public List<Flashcard> createFlashcard(@RequestBody List<Flashcard> flashcardList) {
         return flashcardService.createFlashcards(flashcardList);
     }
 
@@ -33,6 +32,10 @@ public class FlashcardController {
     void deleteFlashcard(@PathVariable UUID id) {
         flashcardService.deleteFlashcard(id);
     }
+
+    @PutMapping
+    public Flashcard updateFlashcard(@RequestBody Flashcard flashcard) {
+        return flashcardService.updateFlashcard(flashcard);
+    }
+
 }
-
-
