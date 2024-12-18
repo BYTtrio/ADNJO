@@ -1,5 +1,6 @@
 package io.github.byttrio.andjo.flashcard;
 
+import io.github.byttrio.andjo.flashcardset.FlashcardSet;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,7 +20,7 @@ public class Flashcard {
     private String term;
     private String definition;
 
-    //@ManyToOne
-    //@JoinColumn(name = "set_id")
-    //private Set set;
+    @ManyToOne
+    @JoinColumn(name = "flaschcard_set_id")
+    private FlashcardSet flashcardSet;
 }
