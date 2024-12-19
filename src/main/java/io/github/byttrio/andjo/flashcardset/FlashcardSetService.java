@@ -1,14 +1,14 @@
 package io.github.byttrio.andjo.flashcardset;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.UUID;
 
 @Service
+@RequiredArgsConstructor
 public class FlashcardSetService {
-
-    @Autowired
     private FlashcardSetRepository flashcardSetRepository;
 
     public List<FlashcardSet> getAllFlashcardSets() {
