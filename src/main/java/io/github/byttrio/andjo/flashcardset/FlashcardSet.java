@@ -1,10 +1,12 @@
 package io.github.byttrio.andjo.flashcardset;
 
 import io.github.byttrio.andjo.category.Category;
+import io.github.byttrio.andjo.user.User;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
+import java.util.Set;
 import java.util.UUID;
 
 @Entity
@@ -27,11 +29,12 @@ public class FlashcardSet {
     private String name;
     private String description;
 
-    @Getter
-    @Setter
     @Column(nullable = false)
-    private boolean isPublic;
+    private boolean isPublic = false;
 
-    @Column(nullable = false, updatable = false)
-    private LocalDateTime createdAt;
+    @Column(updatable = false)
+    private LocalDateTime createdAt = LocalDateTime.now();
+
+    @ManyToMany(mappedBy = "savedFlashcardSets")
+    Set<User> users;
 }
