@@ -7,7 +7,6 @@ A web application for learning foreign languages through flashcards and quizzes.
 - Spring Boot DevTools
 - Lombok - reduces boilerplate code
 - Spring Web - HTTP client
-- Thymeleaf - template engine
 - Spring Data JPA - API for connecting and executing queries on a database
 - H2 Database
 - Validation
