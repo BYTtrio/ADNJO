@@ -1,5 +1,6 @@
 package io.github.byttrio.andjo.flashcardset;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import io.github.byttrio.andjo.category.Category;
 import io.github.byttrio.andjo.user.User;
 import jakarta.persistence.*;
@@ -17,7 +18,7 @@ import java.util.UUID;
 public class FlashcardSet {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID setId;
+    private UUID id;
 
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
@@ -36,5 +37,6 @@ public class FlashcardSet {
     private LocalDateTime createdAt = LocalDateTime.now();
 
     @ManyToMany(mappedBy = "savedFlashcardSets")
+    @JsonBackReference
     Set<User> users;
 }
