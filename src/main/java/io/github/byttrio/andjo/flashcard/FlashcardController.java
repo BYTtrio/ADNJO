@@ -19,7 +19,7 @@ public class FlashcardController {
     }
 
     @GetMapping("/{id}")
-    public Flashcard flashcard(@PathVariable UUID id) {
+    public Flashcard getFlashcardById(@PathVariable UUID id) {
         return flashcardService.getFlashcardById(id);
     }
 
