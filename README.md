@@ -10,6 +10,27 @@ A web application for learning foreign languages through flashcards and quizzes.
 - Spring Data JPA - API for connecting and executing queries on a database
 - H2 Database
 - Validation
+- Swagger
+
+# Setup
+
+To set up this project, run the following commands in the project's directory:
+
+### Server Backend
+
+```bash
+  ./mvnw spring-boot:run
+```
+
+### Frontend Client Application
+
+```bash
+  cd .\frontend\
+  npm run dev
+```
+
+# API Documentation
+## Base URL
 
 The API is accessible at:
 
