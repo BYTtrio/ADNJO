@@ -12,27 +12,265 @@ An web application for learning foreign languages through flashcards and quizzes
 - H2 Database
 - Validation
 
-## API Reference
+The API is accessible at:
 
-#### Generate a flashcard
+```
+http://localhost:8080
+```
+
+---
+
+### Flashcards
+
+#### Get All Flashcards
 
 ```http
-  POST /api/generate/flashcard
+  GET /api/flashcards
 ```
+
+**Responses**
+
+- `200 OK`: Returns an array of flashcards.
+
+---
+
+#### Create Flashcards
+
+```http
+  POST /api/flashcards
+```
+
+**Request Body**
+
+| Parameter    | Type   | Description                  |
+| :----------- | :----- | :--------------------------- |
+| `flashcards` | `array` | **Required**. Array of flashcards to create |
+
+**Responses**
+
+- `200 OK`: Returns an array of the created flashcards.
+
+---
+
+#### Update a Flashcard
+
+```http
+  PUT /api/flashcards
+```
+
+**Request Body**
+
+| Parameter     | Type     | Description                   |
+| :------------ | :------- | :---------------------------- |
+| `flashcard`   | `object` | **Required**. The flashcard to update |
+
+**Responses**
+
+- `200 OK`: Returns the updated flashcard.
+
+---
+
+#### Get Flashcard By ID
+
+```http
+  GET /api/flashcards/{id}
+```
+
+**Path Parameters**
+
+| Parameter | Type     | Description                 |
+| :-------- | :------- | :-------------------------- |
+| `id`      | `string` | **Required**. Flashcard ID  |
+
+**Responses**
+
+- `200 OK`: Returns the flashcard.
+
+---
+
+#### Delete Flashcard
+
+```http
+  DELETE /api/flashcards/{id}
+```
+
+**Path Parameters**
+
+| Parameter | Type     | Description                 |
+| :-------- | :------- | :-------------------------- |
+| `id`      | `string` | **Required**. Flashcard ID  |
+
+**Responses**
+
+- `200 OK`: Flashcard deleted successfully.
+
+---
+
+### Flashcard Sets
+
+#### Get All Flashcard Sets
+
+```http
+  GET /api/flashcard-sets
+```
+
+**Responses**
+
+- `200 OK`: Returns an array of flashcard sets.
+
+---
+
+#### Create Flashcard Set
+
+```http
+  POST /api/flashcard-sets
+```
+
+**Request Body**
+
+| Parameter         | Type     | Description                  |
+| :---------------- | :------- | :--------------------------- |
+| `flashcardSet`    | `object` | **Required**. Flashcard set details |
+
+**Responses**
+
+- `200 OK`: Returns the created flashcard set.
+
+---
+
+#### Update Flashcard Set
+
+```http
+  PUT /api/flashcard-sets/{id}
+```
+
+**Path Parameters**
+
+| Parameter | Type     | Description                      |
+| :-------- | :------- | :------------------------------- |
+| `id`      | `string` | **Required**. Flashcard set ID   |
+
+**Request Body**
+
+| Parameter         | Type     | Description                  |
+| :---------------- | :------- | :--------------------------- |
+| `flashcardSet`    | `object` | **Required**. Flashcard set details |
+
+**Responses**
+
+- `200 OK`: Returns the updated flashcard set.
+
+---
+
+#### Delete Flashcard Set
+
+```http
+  DELETE /api/flashcard-sets/{id}
+```
+
+**Path Parameters**
+
+| Parameter | Type     | Description                      |
+| :-------- | :------- | :------------------------------- |
+| `id`      | `string` | **Required**. Flashcard set ID   |
+
+**Responses**
+
+- `200 OK`: Flashcard set deleted successfully.
+
+---
+
+#### Get All Flashcards From Set
+
+```http
+  GET /api/flashcards/set/{id}
+```
+
+**Path Parameters**
+
+| Parameter | Type     | Description                      |
+| :-------- | :------- | :------------------------------- |
+| `id`      | `string` | **Required**. Flashcard set ID   |
+
+**Responses**
+
+- `200 OK`: Returns an array of flashcards from the set.
+
+---
+
+### Categories
+
+#### Get All Categories
+
+```http
+  GET /api/categories
+```
+
+**Responses**
+
+- `200 OK`: Returns an array of categories.
+
+---
+
+#### Create Category
+
+```http
+  POST /api/categories
+```
+
+**Request Body**
+
+| Parameter   | Type     | Description                 |
+| :---------- | :------- | :-------------------------- |
+| `category`  | `object` | **Required**. Category details |
+
+**Responses**
+
+- `200 OK`: Returns the created category.
+
+---
+
+#### Update Category
+
+```http
+  PUT /api/categories/{id}
+```
+
+**Path Parameters**
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| `api_key` | `string` | **Required**. Your API key |
-| `word`    | `string` | **Required**. Word         |
+| `id`      | `string` | **Required**. Category ID  |
 
+**Request Body**
 
-## Deployment
+| Parameter   | Type     | Description                 |
+| :---------- | :------- | :-------------------------- |
+| `category`  | `object` | **Required**. Category details |
 
-To deploy this project run in project's directory
+**Responses**
 
-```bash
-  ./mvnw spring-boot:run
+- `200 OK`: Returns the updated category.
+
+---
+
+#### Delete Category
+
+```http
+  DELETE /api/categories/{id}
 ```
+
+**Path Parameters**
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `id`      | `string` | **Required**. Category ID  |
+
+**Responses**
+
+- `200 OK`: Category deleted successfully.
+
+---
 
 ## Color Reference
 
