@@ -21,6 +21,6 @@ public class Flashcard {
     private String definition;
 
     @ManyToOne
-    @JoinColumn(name = "flaschcard_set_id")
+    @JoinColumn(name = "flashcard_set_id")
     private FlashcardSet flashcardSet;
 }
