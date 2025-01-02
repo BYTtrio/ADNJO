@@ -1,5 +1,6 @@
 package io.github.byttrio.andjo.user;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import io.github.byttrio.andjo.flashcardset.FlashcardSet;
 import jakarta.persistence.*;
 import lombok.*;
@@ -31,5 +32,6 @@ public class User {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "set_id")
     )
+    @JsonManagedReference
     Set<FlashcardSet> savedFlashcardSets;
 }
