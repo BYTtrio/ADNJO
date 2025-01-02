@@ -8,9 +8,9 @@ import java.util.UUID;
 @RestController
 @CrossOrigin
 @RequiredArgsConstructor
-@RequestMapping("/api/flashcardsets")
+@RequestMapping("/api/flashcard-sets")
 public class FlashcardSetController {
-    private FlashcardSetService flashcardSetService;
+    private final FlashcardSetService flashcardSetService;
 
     @GetMapping
     public List<FlashcardSet> getAllFlashcardSets() {
@@ -28,8 +28,7 @@ public class FlashcardSetController {
     }
 
     @DeleteMapping("/{id}")
-    public String deleteFlashcardSet(@PathVariable UUID id) {
+    public void deleteFlashcardSet(@PathVariable UUID id) {
         flashcardSetService.deleteFlashcardSet(id);
-        return "Flashcard set deleted successfully.";
     }
 }
