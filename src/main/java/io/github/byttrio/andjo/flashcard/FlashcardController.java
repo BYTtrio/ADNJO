@@ -23,6 +23,11 @@ public class FlashcardController {
         return flashcardService.getFlashcardById(id);
     }
 
+    @GetMapping("/set/{id}")
+    public List<Flashcard> getAllFlashcardsFromSet (@PathVariable UUID id) {
+        return flashcardService.getAllFlashcardsFromSet(id);
+    }
+
     @PostMapping
     public List<Flashcard> createFlashcard(@RequestBody List<Flashcard> flashcardList) {
         return flashcardService.createFlashcards(flashcardList);

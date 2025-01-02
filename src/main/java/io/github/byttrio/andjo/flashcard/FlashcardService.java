@@ -14,6 +14,11 @@ public class FlashcardService {
     public List<Flashcard> getAllFlashcards() {
         return flashcardRepository.findAll();
     }
+
+    public List<Flashcard> getAllFlashcardsFromSet(final UUID id) {
+        return  flashcardRepository.findAllByFlashcardSet_id(id);
+    }
+
     public Flashcard getFlashcardById(final UUID id) {
         return flashcardRepository.findById(id).orElse(null);
     }
