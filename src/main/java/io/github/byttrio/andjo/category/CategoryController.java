@@ -9,7 +9,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 @RequestMapping("/api/categories")
 public class CategoryController {
-    private CategoryService categoryService;
+    private final CategoryService categoryService;
 
     @GetMapping
     public List<Category> getAllCategories() {
@@ -27,8 +27,7 @@ public class CategoryController {
     }
 
     @DeleteMapping("/{id}")
-    public String deleteCategory(@PathVariable UUID id) {
+    public void deleteCategory(@PathVariable UUID id) {
         categoryService.deleteCategory(id);
-        return "Category deleted successfully.";
     }
 }

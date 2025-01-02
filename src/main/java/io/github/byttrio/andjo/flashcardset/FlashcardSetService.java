@@ -8,7 +8,7 @@ import java.util.UUID;
 @Service
 @RequiredArgsConstructor
 public class FlashcardSetService {
-    private FlashcardSetRepository flashcardSetRepository;
+    private final FlashcardSetRepository flashcardSetRepository;
 
     public List<FlashcardSet> getAllFlashcardSets() {
         return flashcardSetRepository.findAll();
