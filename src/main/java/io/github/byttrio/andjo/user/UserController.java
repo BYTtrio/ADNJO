@@ -19,7 +19,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public User getUserById(@RequestParam UUID id){
+    public User getUserById(@PathVariable UUID id){
         return userService.getUserById(id);
     }
 
@@ -28,8 +28,8 @@ public class UserController {
         return userService.createUser(user);
     }
 
-    @DeleteMapping("/id")
-    public void deleteUser(@RequestParam UUID id){
+    @DeleteMapping("/{id}")
+    public void deleteUser(@PathVariable UUID id){
         userService.deleteUserById(id);
     }
 
