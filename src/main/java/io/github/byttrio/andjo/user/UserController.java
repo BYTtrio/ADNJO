@@ -24,7 +24,7 @@ public class UserController {
     }
 
     @PostMapping
-    public User createUser(@RequestParam User user){
+    public User createUser(@RequestBody User user){
         return userService.createUser(user);
     }
 
@@ -34,7 +34,7 @@ public class UserController {
     }
 
     @PutMapping
-    public User updateUser(@RequestParam User user){
+    public User updateUser(@RequestBody User user){
         return userService.updateUser(user);
     }
 
