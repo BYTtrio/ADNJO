@@ -3,7 +3,9 @@ package io.github.byttrio.andjo.user;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import io.github.byttrio.andjo.flashcardset.FlashcardSet;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 import java.util.Set;
