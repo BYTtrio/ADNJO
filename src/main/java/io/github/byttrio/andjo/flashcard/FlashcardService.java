@@ -16,7 +16,7 @@ public class FlashcardService {
     }
 
     public List<Flashcard> getAllFlashcardsFromSet(final UUID id) {
-        return  flashcardRepository.findAllByFlashcardSet_id(id);
+        return  flashcardRepository.findAllByFlashcardSetId(id);
     }
 
     public Flashcard getFlashcardById(final UUID id) {
