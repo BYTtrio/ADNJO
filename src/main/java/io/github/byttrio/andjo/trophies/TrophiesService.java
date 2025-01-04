@@ -1,11 +1,10 @@
 package io.github.byttrio.andjo.trophies;
 
-import java.util.List;
-import java.util.UUID;
-
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import lombok.RequiredArgsConstructor;
+import java.util.List;
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
@@ -26,5 +25,9 @@ public class TrophiesService {
 
     public Trophies generateTrophies(Trophies trophies) {
         return trophiesRepository.save(trophies);
+    }
+
+    public List<Trophies> getAllTrophiesByUserId(final UUID id) {
+        return  trophiesRepository.findAllByUserId(id);
     }
 }
