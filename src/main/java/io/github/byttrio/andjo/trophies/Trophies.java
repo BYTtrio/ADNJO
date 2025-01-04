@@ -18,14 +18,16 @@ public class Trophies {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
-    @OneToOne
-    @JoinColumn(name = "users_id", nullable = false)
-    private User user_id;
     private String name;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
+
     @Lob // Jakarta large object type
     private byte[] image;
+
     @Column(updatable = false)
     private LocalDateTime awardedAt = LocalDateTime.now();
-    
 
 }

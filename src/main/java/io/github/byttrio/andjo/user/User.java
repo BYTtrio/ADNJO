@@ -2,6 +2,7 @@ package io.github.byttrio.andjo.user;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import io.github.byttrio.andjo.flashcardset.FlashcardSet;
+import io.github.byttrio.andjo.trophies.Trophies;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,6 +26,7 @@ public class User {
     private String password;
     private Integer totalPoints;
     private LocalDateTime updatedAt = LocalDateTime.now();
+
     @Column(updatable = false)
     private LocalDateTime createdAt = LocalDateTime.now();
 
@@ -36,4 +38,7 @@ public class User {
     )
     @JsonManagedReference
     Set<FlashcardSet> savedFlashcardSets;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval=true)
+    Set<Trophies> ownedTrophies;
 }
