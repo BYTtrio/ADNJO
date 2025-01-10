@@ -68,11 +68,6 @@
   }
 }
 
-.container {
-  size: auto;
-  padding: 1rem;
-}
-
 .flashcard, .flashcardSet {
   margin: 1rem;
 }
