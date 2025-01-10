@@ -9,7 +9,6 @@ import '@/index.css'
 export default function HomePage() {
   const [flashcardSetData, setFlashcardSetData] = useState<FlashcardSet[]>([])
   const [flashcardData, setFlashcardData] = useState<Flashcard[]>([])
-  const [showFlashcards, setShowFlashcards] = useState(false)
 
   useEffect(() => {
     fetch('http://localhost:8080/api/flashcard-sets')
@@ -57,12 +56,12 @@ export default function HomePage() {
   )
   
   return (
-    <>
-        <Navbar />
-        <div className='flex flex-row'>
-          <div className='container left basis-2/3'>{flashcardSets}</div>
-          <div className='container right basis-1/3'>{Flashcards}</div>
-        </div>
-    </>
+    <div className=''>
+      <Navbar />
+      <div className='flex flex-row'>
+        <div className='container left basis-2/3'>{flashcardSets}</div>
+        <div className='container right basis-1/3'>{Flashcards}</div>
+      </div>
+    </div>
   )
 }
