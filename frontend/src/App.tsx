@@ -1,4 +1,3 @@
-//import './index.css'
 import { Route, Routes } from 'react-router-dom'
 import { ThemeProvider } from '@/components/theme-provider.tsx'
 import Login from '@/pages/login-page.tsx'
@@ -17,6 +16,9 @@ function App() {
           <Route path='/' element={<Home/>} />
           <Route path='/login' element={<Login/>} />
           <Route path='/register' element={<Register/>} />
+          <Route path='/leaderboard' element={<Leaderboard/>} />
+          <Route path='/trophies' element={<Trophies/>} />
+          <Route path='/profile' element={<Profile/>}/>
         </Routes>
       </ThemeProvider>
     </>
