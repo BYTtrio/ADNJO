@@ -1,9 +1,12 @@
 //import './index.css'
 import { Route, Routes } from 'react-router-dom'
-import Login from './pages/login-page.tsx'
-import Register from './pages/register-page.tsx'
-import Home from './pages/home.tsx'
-import { ThemeProvider } from './components/theme-provider.tsx'
+import { ThemeProvider } from '@/components/theme-provider.tsx'
+import Login from '@/pages/login-page.tsx'
+import Register from '@/pages/register-page.tsx'
+import Home from '@/pages/home.tsx'
+import Leaderboard from '@/pages/leaderboard.tsx'
+import Trophies from '@/pages/trophies.tsx'
+import Profile from '@/pages/profile.tsx'
 
 
 function App() {

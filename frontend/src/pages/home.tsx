@@ -1,17 +1,10 @@
 import { useEffect, useState } from 'react'
-import '../index.css'
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import Flashcard from '../interfaces/flashcard'
-import FlashcardSet from '../interfaces/flashcard-set'
-import Navbar from '../components/navbar'
+import Flashcard from '@/interfaces/flashcard'
+import FlashcardSet from '@/interfaces/flashcard-set'
+import Navbar from '@/components/navbar'
+import '@/index.css'
 
 export default function HomePage() {
   const [flashcardSetData, setFlashcardSetData] = useState<FlashcardSet[]>([])
