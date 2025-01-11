@@ -6,6 +6,7 @@ import Home from '@/pages/home.tsx'
 import Leaderboard from '@/pages/leaderboard.tsx'
 import Trophies from '@/pages/trophies.tsx'
 import Profile from '@/pages/profile.tsx'
+import CreateFlashcardSet from './pages/create-flashcard-set.tsx'
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path='/leaderboard' element={<Leaderboard/>} />
           <Route path='/trophies' element={<Trophies/>} />
           <Route path='/profile' element={<Profile/>}/>
+          <Route path='/flashcards/create' element={<CreateFlashcardSet/>}/>
         </Routes>
       </ThemeProvider>
     </>
