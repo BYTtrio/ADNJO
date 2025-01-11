@@ -83,3 +83,37 @@ WHERE NOT EXISTS (SELECT 1 FROM flashcards WHERE id = '30303030-3030-3030-3030-3
 INSERT INTO flashcards (id, definition, term, flashcard_set_id)
 SELECT '31313131-3131-3131-3131-313131313131', 'The study of sentence structure', 'Syntax', '88888888-8888-8888-8888-888888888888'
 WHERE NOT EXISTS (SELECT 1 FROM flashcards WHERE id = '31313131-3131-3131-3131-313131313131');
+
+-- Insert 30 mock users into the USERS table
+INSERT INTO users (id, email, password, username, total_points, created_at, updated_at)
+VALUES
+  ('11111111-1111-1111-1111-111111111111', 'user1@example.com', 'hashed_password1', 'user1', 1234, '2023-01-01 12:00:00', '2023-01-01 12:00:00'),
+  ('22222222-2222-2222-2222-222222222222', 'user2@example.com', 'hashed_password2', 'user2', 5678, '2023-02-01 14:00:00', '2023-02-01 14:00:00'),
+  ('33333333-3333-3333-3333-333333333333', 'user3@example.com', 'hashed_password3', 'user3', 910, '2023-03-01 16:00:00', '2023-03-01 16:00:00'),
+  ('44444444-4444-4444-4444-444444444445', 'user4@example.com', 'hashed_password4', 'user4', 345, '2023-04-01 18:00:00', '2023-04-01 18:00:00'),
+  ('55555555-5555-5555-5555-555555555551', 'user5@example.com', 'hashed_password5', 'user5', 6789, '2023-05-01 20:00:00', '2023-05-01 20:00:00'),
+  ('66666666-6666-6666-6666-666666666661', 'user6@example.com', 'hashed_password6', 'user6', 4321, '2023-06-01 10:00:00', '2023-06-01 10:00:00'),
+  ('77777777-7777-7777-7777-777777777771', 'user7@example.com', 'hashed_password7', 'user7', 876, '2023-07-01 11:00:00', '2023-07-01 11:00:00'),
+  ('88888888-8888-8888-8888-888888888881', 'user8@example.com', 'hashed_password8', 'user8', 5432, '2023-08-01 13:00:00', '2023-08-01 13:00:00'),
+  ('99999999-9999-9999-9999-999999999991', 'user9@example.com', 'hashed_password9', 'user9', 987, '2023-09-01 15:00:00', '2023-09-01 15:00:00'),
+  ('aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa', 'user10@example.com', 'hashed_password10', 'user10', 12345, '2023-10-01 17:00:00', '2023-10-01 17:00:00'),
+  ('bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb', 'user11@example.com', 'hashed_password11', 'user11', 2500, '2023-11-01 09:00:00', '2023-11-01 09:00:00'),
+  ('cccccccc-cccc-cccc-cccc-cccccccccccc', 'user12@example.com', 'hashed_password12', 'user12', 670, '2023-11-02 10:00:00', '2023-11-02 10:00:00'),
+  ('dddddddd-dddd-dddd-dddd-dddddddddddd', 'user13@example.com', 'hashed_password13', 'user13', 4800, '2023-11-03 11:00:00', '2023-11-03 11:00:00'),
+  ('eeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee', 'user14@example.com', 'hashed_password14', 'user14', 375, '2023-11-04 12:00:00', '2023-11-04 12:00:00'),
+  ('ffffffff-ffff-ffff-ffff-ffffffffffff', 'user15@example.com', 'hashed_password15', 'user15', 2980, '2023-11-05 13:00:00', '2023-11-05 13:00:00'),
+  ('10101010-1010-1010-1010-101010101010', 'user16@example.com', 'hashed_password16', 'user16', 4500, '2023-11-06 14:00:00', '2023-11-06 14:00:00'),
+  ('11111111-1111-1111-1111-111111111112', 'user17@example.com', 'hashed_password17', 'user17', 3200, '2023-11-07 15:00:00', '2023-11-07 15:00:00'),
+  ('12121212-1212-1212-1212-121212121212', 'user18@example.com', 'hashed_password18', 'user18', 1500, '2023-11-08 16:00:00', '2023-11-08 16:00:00'),
+  ('13131313-1313-1313-1313-131313131313', 'user19@example.com', 'hashed_password19', 'user19', 980, '2023-11-09 17:00:00', '2023-11-09 17:00:00'),
+  ('14141414-1414-1414-1414-141414141414', 'user20@example.com', 'hashed_password20', 'user20', 8900, '2023-11-10 18:00:00', '2023-11-10 18:00:00'),
+  ('15151515-1515-1515-1515-151515151515', 'user21@example.com', 'hashed_password21', 'user21', 725, '2023-11-11 19:00:00', '2023-11-11 19:00:00'),
+  ('16161616-1616-1616-1616-161616161616', 'user22@example.com', 'hashed_password22', 'user22', 450, '2023-11-12 20:00:00', '2023-11-12 20:00:00'),
+  ('17171717-1717-1717-1717-171717171717', 'user23@example.com', 'hashed_password23', 'user23', 1900, '2023-11-13 21:00:00', '2023-11-13 21:00:00'),
+  ('18181818-1818-1818-1818-181818181818', 'user24@example.com', 'hashed_password24', 'user24', 2450, '2023-11-14 22:00:00', '2023-11-14 22:00:00'),
+  ('19191919-1919-1919-1919-191919191919', 'user25@example.com', 'hashed_password25', 'user25', 8300, '2023-11-15 23:00:00', '2023-11-15 23:00:00'),
+  ('20202020-2020-2020-2020-202020202020', 'user26@example.com', 'hashed_password26', 'user26', 1520, '2023-11-16 12:00:00', '2023-11-16 12:00:00'),
+  ('21212121-2121-2121-2121-212121212121', 'user27@example.com', 'hashed_password27', 'user27', 3650, '2023-11-17 13:00:00', '2023-11-17 13:00:00'),
+  ('22222222-2222-2222-2222-222222222223', 'user28@example.com', 'hashed_password28', 'user28', 2780, '2023-11-18 14:00:00', '2023-11-18 14:00:00'),
+  ('23232323-2323-2323-2323-232323232323', 'user29@example.com', 'hashed_password29', 'user29', 990, '2023-11-19 15:00:00', '2023-11-19 15:00:00'),
+  ('24242424-2424-2424-2424-242424242424', 'user30@example.com', 'hashed_password30', 'user30', 7850, '2023-11-20 16:00:00', '2023-11-20 16:00:00');
