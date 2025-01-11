@@ -58,7 +58,7 @@ export default function HomePage() {
   return (
     <div className=''>
       <Navbar />
-      <div className='flex flex-row'>
+      <div className='flex flex-row justify-center'>
         <div className='container left basis-2/3'>{flashcardSets}</div>
         <div className='container right basis-1/3'>{Flashcards}</div>
       </div>

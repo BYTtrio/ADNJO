@@ -2,6 +2,9 @@ import Navbar from "@/components/navbar";
 
 export default function LeaderboardPage() {
   return (
-    <Navbar />
+    <>
+      <Navbar />
+      <div className="table"></div>
+    </>
   )
 }
