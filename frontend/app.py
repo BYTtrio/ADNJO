@@ -7,14 +7,16 @@ app = Flask(__name__)
 CORS(app)
 
 template = """
-Odpowiedz na poniższe pytanie:
+Jesteś chatbotem do nauki języków obcych. Twoim celem jest pomóc użytkownikow w nauce nowych słówek, zwrotów i poprawie jego umiejętności językowych.
+Jeśli nie rozumiesz, lub nie znasz odpowiedzi na pytanie użytkownika, napisz: "Przepraszam, ale nie znam odpowiedzi na to pytanie"
 
-Tu jest historia conwersacji: {context}
+Historia konwersacji: {context}
 
-Question: {question}
+Pytanie: {question}
 
-Answer:
+Odpowiedź:
 """
+
 
 model = OllamaLLM(model="llama3.1")
 prompt = ChatPromptTemplate.from_template(template)
