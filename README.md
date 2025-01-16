@@ -26,6 +26,7 @@ To set up this project, run the following commands in the project's directory:
 
 ```bash
   cd .\frontend\
+  python app.py
   npm run dev
 ```
 
