@@ -5,35 +5,47 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 export default function CreateFlashcardSetPage() {
-  return (
-    <div>
-      <Navbar />
-      <div className="flex flex-col p-6 basis-2/3'">
-        <h2 className="text-4xl">Create Flashcards</h2>
-        <Button>Save flashcards</Button>
+  function handleClick() {
+    
+  }
+  
+  const form = (
+    <form className="p-6 md:p-8">
+      <div className="flex flex-col p-6 gap-6 ">
+        <h2 className="text-4xl text-center">Create Flashcards</h2>
         <Card>
-          <CardHeader>
+          <CardHeader className="gap-2">
             <CardTitle>Name</CardTitle>
             <CardDescription>
-              <Input></Input>
+            <Input
+                id="name"
+                type="text"
+                required
+                />
             </CardDescription>
             <CardTitle>
               Category
             </CardTitle>
             <CardDescription>
-              <Input></Input>
+            <Input
+                id="category"
+                type="category"
+                required
+                />
             </CardDescription>
           </CardHeader>
           <CardFooter>
             <p>Don't want to write your own flashcards? Try our AI Flashcard Generator to instantly transform your notes or documents into flashcards.</p>
           </CardFooter>
         </Card>
+        <Button>Save flashcard set</Button>
+        
         <Card>
           <CardHeader>
             <CardTitle>1</CardTitle>
           </CardHeader>
-          <CardFooter >
-            <div className="basis-1/3">
+          <CardContent>
+            <div>
               <Label htmlFor="term">Term</Label>
               <Input
                 id="term"
@@ -42,7 +54,7 @@ export default function CreateFlashcardSetPage() {
                 required
                 />
             </div>
-            <div className="basis-1/3">
+            <div>
               <Label htmlFor="definition">Definition</Label>
               <Input
                 id="definition"
@@ -52,10 +64,19 @@ export default function CreateFlashcardSetPage() {
                 />
             </div>
             <Button>Delete</Button>
-          </CardFooter>
+          </CardContent>
         </Card>
-        <Button>Add Flashcard</Button>
+        <Button onClick={() => handleClick()}>Add Flashcard</Button>
       </div>
-    </div>
+    </form>
+  );
+  
+  return (
+    <>
+      <Navbar />
+      <div className="flex justify-center">
+        <div className="m-4">{form}</div>
+      </div>
+    </>
   )
 }
