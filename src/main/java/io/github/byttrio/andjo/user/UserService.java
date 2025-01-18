@@ -31,4 +31,7 @@ public class UserService {
         return userRepository.save(user);
     }
 
+    public List<User> getUserLeaderboard(){
+        return userRepository.findAllByOrderByTotalPointsDesc();
+    }
 }

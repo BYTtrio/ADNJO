@@ -38,4 +38,8 @@ public class UserController {
         return userService.updateUser(user);
     }
 
+    @GetMapping("/leaderboard")
+    public List<User> getUserLeaderboard(){
+        return userService.getUserLeaderboard();
+    }
 }
