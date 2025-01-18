@@ -91,7 +91,7 @@ const Navbar = () => {
                 <SheetHeader>
                   <SheetTitle>
                     <div className="flex items-center gap-2">
-                    <img src="https://images.vexels.com/media/users/3/142789/isolated/lists/2bfb04ad814c4995f0c537c68db5cd0b-multicolor-swirls-circle-logo.png" className="w-8" alt="logo" />
+                      <img src="https://images.vexels.com/media/users/3/142789/isolated/lists/2bfb04ad814c4995f0c537c68db5cd0b-multicolor-swirls-circle-logo.png" className="w-8" alt="logo" />
                       <span className="text-xl font-bold">Andjo</span>
                     </div>
                   </SheetTitle>
