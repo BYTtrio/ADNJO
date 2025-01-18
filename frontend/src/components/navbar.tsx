@@ -100,6 +100,9 @@ const Navbar = () => {
                   <a href="/" className="font-semibold">
                     Home
                   </a>
+                  <a href="/flashcards/create" className="font-semibold">
+                    Create flashcards
+                  </a>
                   <a href="/trophies" className="font-semibold">
                     My Trophies
                   </a>
