@@ -77,8 +77,10 @@
 }
 
 :root {
+  font-size: 1rem;
   color-scheme: dark;
   font-synthesis: none;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
