@@ -10,17 +10,18 @@ const Navbar = () => {
   const navigate = useNavigate();
   return (
     <section className="py-4">
-      <div className="container">
-        <nav className="hidden justify-between lg:flex">
+      <div className="container max-w-full">
+        <nav className="hidden justify-between lg:flex mx-4">
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
               <img src="https://images.vexels.com/media/users/3/142789/isolated/lists/2bfb04ad814c4995f0c537c68db5cd0b-multicolor-swirls-circle-logo.png" className="w-8" alt="logo" />
-              <span className="text-xl font-bold">Andjo</span>
+              <span className="text-2xl font-bold">Andjo</span>
             </div>
             <div className="flex items-center">
               <a
                 className={cn(
                   "text-muted-foreground",
+                  "text-2xl",
                   navigationMenuTriggerStyle,
                   buttonVariants({
                     variant: "ghost",
@@ -28,7 +29,7 @@ const Navbar = () => {
                 )}
                 href="/"
               >
-                Home
+                <span className="text-base">Home</span>
               </a>
               <a
                 className={cn(
@@ -40,7 +41,7 @@ const Navbar = () => {
                 )}
                 href="/flashcards/create"
               >
-                Create flashcards
+                <span className="text-base">Create flashcards</span>
               </a>
               <a
                 className={cn(
@@ -52,7 +53,7 @@ const Navbar = () => {
                 )}
                 href="#"
               >
-                My Trophies
+                <span className="text-base">My Trophies</span>
               </a>
               <a
                 className={cn(
@@ -62,20 +63,20 @@ const Navbar = () => {
                     variant: "ghost",
                   }),
                 )}
-                href="#"
+                href="/leaderboard"
               >
-                Leaderboard
+                <span className="text-base">Leaderboard</span>
               </a>
             </div>
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-2 justify-end">
             <Button variant="outline" onClick={() => navigate("/login")}>Log in</Button>
             <Button onClick={() => navigate("/register")}>Sign up</Button>
             <ModeToggle/>
           </div>
         </nav>
         <div className="block lg:hidden">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between mx-4">
             <div className="flex items-center gap-2">
               <img src="https://images.vexels.com/media/users/3/142789/isolated/lists/2bfb04ad814c4995f0c537c68db5cd0b-multicolor-swirls-circle-logo.png" className="w-8" alt="logo" />
               <span className="text-xl font-bold">Andjo</span>
