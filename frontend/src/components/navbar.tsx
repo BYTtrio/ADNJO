@@ -108,55 +108,10 @@ const Navbar = () => {
                   </a>
                 </div>
                 <div className="border-t pt-4">
-                  <div className="grid grid-cols-2 justify-start">
-                    <a
-                      className={cn(
-                        buttonVariants({
-                          variant: "ghost",
-                        }),
-                        "justify-start text-muted-foreground",
-                      )}
-                      href="#"
-                    >
-                      Github
-                    </a>
-                    <a
-                      className={cn(
-                        buttonVariants({
-                          variant: "ghost",
-                        }),
-                        "justify-start text-muted-foreground",
-                      )}
-                      href="#"
-                    >
-                      Contact
-                    </a>
-                    <a
-                      className={cn(
-                        buttonVariants({
-                          variant: "ghost",
-                        }),
-                        "justify-start text-muted-foreground",
-                      )}
-                      href="#"
-                    >
-                      Sitemap
-                    </a>
-                    <a
-                      className={cn(
-                        buttonVariants({
-                          variant: "ghost",
-                        }),
-                        "justify-start text-muted-foreground",
-                      )}
-                      href="#"
-                    >
-                      Cookie Settings
-                    </a>
-                  </div>
                   <div className="mt-2 flex flex-col gap-3">
                     <Button variant="outline">Log in</Button>
                     <Button>Sign up</Button>
+                    <ModeToggle/>
                   </div>
                 </div>
               </SheetContent>
