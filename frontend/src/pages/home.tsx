@@ -45,13 +45,11 @@ export default function HomePage() {
       </CardHeader>
       <CardContent>
         <p><b>Category: </b>{flashcardSet.category.name}</p>
-        <p><b>Created: </b>{flashcardSet.createdAt}</p>
+        <p><b>Created: </b>{format(flashcardSet.createdAt as string, "PPP")}</p>
       </CardContent>
       <CardFooter>
         <Button onClick={() => handleClick(flashcardSet.id)}>Preview</Button>
-        <Button>Edit</Button>
         <Button>Start</Button>
-        <Button>Share Link</Button>
       </CardFooter>
     </Card>
   )
