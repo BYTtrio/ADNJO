@@ -1,4 +1,3 @@
-import { ModeToggle } from "@/components/mode-toggle"
 import { RegisterForm } from "@/components/register-form.tsx"
 
 export default function RegisterPage() {

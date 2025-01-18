@@ -1,6 +1,10 @@
 import Navbar from "@/components/navbar";
-import { Card, CardContent, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import User from "@/interfaces/user";
+import { format } from "date-fns/format";
 import { useEffect, useState } from "react";
 
 export default function ProfilePage() {
