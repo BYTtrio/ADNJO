@@ -32,10 +32,10 @@ export default function HomePage() {
   const Flashcards = flashcardData.map(flashcard => 
     <Card className='flashcard' key={flashcard.id}>
       <CardTitle>
-      <p><b>Term: </b>{flashcard.term}</p>
+      <p>{flashcard.term}</p>
       </CardTitle>
       <CardDescription>
-        <p><b>Definition: </b>{flashcard.definition}</p>
+        <p><b></b>{flashcard.definition}</p>
       </CardDescription>
     </Card>
   )
@@ -52,7 +52,7 @@ export default function HomePage() {
       </CardContent>
       <CardFooter>
         <Button onClick={() => handleClick(flashcardSet.id)}>Preview</Button>
-        <Button  onClick={() => navigate("/flashcards/" + flashcardSet.id)}>Start</Button>
+        <Button  onClick={() => navigate("/flashcards/" + flashcardSet.id)}>Learn</Button>
       </CardFooter>
     </Card>
   )
