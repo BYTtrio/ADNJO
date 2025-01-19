@@ -28,7 +28,7 @@ export default function Leaderboard() {
         </div>
       </TableCell>
       <TableCell className="text-center">{user.totalPoints}</TableCell>
-      <TableCell className="text-2xl flex items-center justify-center">
+      <TableCell className="text-2xl flex justify-center text-center">
         {/*This is a placeholder for trophies*/}
         {placeholderTrophies[Math.floor(Math.random() * placeholderTrophies.length /2)]}
         {placeholderTrophies[Math.floor(Math.random() * placeholderTrophies.length /2)]}
