@@ -23,6 +23,11 @@ public class FlashcardSetController {
         return flashcardSetService.createFlashcardSet(flashcardSet);
     }
 
+    @PostMapping("/create")
+    public void createFlashcardSetWithFlashcards(@RequestBody FlashcardSetRequest request) {
+        flashcardSetService.createFlashcardSetWithFlashcards(request);
+    }
+
     @PutMapping("/{id}")
     public FlashcardSet updateFlashcardSet(@PathVariable UUID id, @RequestBody FlashcardSet flashcardSet) {
         return flashcardSetService.updateFlashcardSet(id, flashcardSet);
