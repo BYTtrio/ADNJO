@@ -29,17 +29,18 @@ export default function FlashcardSetPage() {
           cards = {cards}
           cycle = {true}
           frontContentStyle={{
-            backgroundColor: "lightgoldenrodyellow",
-            color: "black",
-            justifyContent: "center",
-            alignItems: "center",
+            backgroundColor: 'hsl(var(--foreground))',
+            color: 'hsl(var(--background))',
+            textAlign: 'center',
+            display: 'grid',
+            placeItems: 'center'
           }}
           backContentStyle={{
             backgroundColor: 'hsl(var(--foreground))',
-            color: 'hsl(var(--primary))',
-            justifyContent: "center",
-            alignItems: "center",
-            border: '--border',
+            color: 'hsl(var(--background))',
+            textAlign: 'center',
+            display: 'grid',
+            placeItems: 'center'
           }}
         />
       </div>
