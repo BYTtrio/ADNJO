@@ -6,10 +6,13 @@ import FlashcardSet from '@/interfaces/flashcard-set'
 import Navbar from '@/components/navbar'
 import '@/index.css'
 import { format } from "date-fns"
+import { useNavigate } from 'react-router-dom'
 
 export default function HomePage() {
   const [flashcardSetData, setFlashcardSetData] = useState<FlashcardSet[]>([])
   const [flashcardData, setFlashcardData] = useState<Flashcard[]>([])
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch('http://localhost:8080/api/flashcard-sets')
@@ -49,7 +52,7 @@ export default function HomePage() {
       </CardContent>
       <CardFooter>
         <Button onClick={() => handleClick(flashcardSet.id)}>Preview</Button>
-        <Button>Start</Button>
+        <Button  onClick={() => navigate("/flashcards/" + flashcardSet.id)}>Start</Button>
       </CardFooter>
     </Card>
   )

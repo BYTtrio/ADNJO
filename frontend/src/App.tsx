@@ -8,6 +8,7 @@ import Trophies from '@/pages/trophies.tsx'
 import Profile from '@/pages/profile.tsx'
 import CreateFlashcardSet from '@/pages/create-flashcard-set.tsx'
 import Chatbot from '@/components/chatbot.tsx'
+import FlashcardSet from '@/pages/flashcard-set'
 
 
 
@@ -22,7 +23,8 @@ function App() {
           <Route path='/leaderboard' element={<Leaderboard/>} />
           <Route path='/trophies' element={<Trophies/>} />
           <Route path='/profile' element={<Profile/>}/>
-          <Route path='/flashcards/create' element={<CreateFlashcardSet/>}/>    
+          <Route path='/flashcards/create' element={<CreateFlashcardSet/>}/>
+          <Route path='/flashcards/:id' element={<FlashcardSet/>}/>
         </Routes>
       </ThemeProvider>
       <Chatbot />
