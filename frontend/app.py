@@ -7,7 +7,6 @@ import logging
 app = Flask(__name__)
 logging.basicConfig(level=logging.DEBUG)
 
-# More permissive CORS settings
 CORS(app, supports_credentials=True)
 
 @app.after_request
@@ -28,7 +27,7 @@ Pytanie: {question}
 Odpowiedź:
 """
 
-model = OllamaLLM(model="llama3.1:latest")
+model = OllamaLLM(model="llama3.1")
 prompt = ChatPromptTemplate.from_template(template)
 
 @app.route("/chat", methods=["POST", "OPTIONS"])
@@ -65,5 +64,5 @@ def chat():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-    # Use port 8000 instead of 5000
     app.run(host="127.0.0.1", port=8000, debug=True)
+    
