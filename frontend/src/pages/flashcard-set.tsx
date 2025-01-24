@@ -19,6 +19,7 @@ export default function FlashcardSetPage() {
       id: flashcard.id,
       frontHTML: flashcard.term,
       backHTML: flashcard.definition,
+      width: '95%'
   }));
 
   return (
