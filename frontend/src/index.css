@@ -68,16 +68,6 @@
   }
 }
 
-.flashcard, .flashcardSet {
-  margin: 1rem;
-  margin-top: 0;
-}
-
-.flashcard {
-  padding: 1rem;
-  margin-left: 0;
-}
-
 :root {
   font-size: 1rem;
   color-scheme: dark;

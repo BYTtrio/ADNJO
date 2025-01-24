@@ -31,7 +31,7 @@ export default function HomePage() {
   }
 
   const Flashcards = flashcardData.map(flashcard => 
-    <Card className='flashcard' key={flashcard.id}>
+    <Card className='mb-6 p-4' key={flashcard.id}>
       <CardTitle>
       <p>{flashcard.term}</p>
       </CardTitle>
@@ -42,7 +42,7 @@ export default function HomePage() {
   )
 
   const flashcardSets = flashcardSetData.map(flashcardSet => 
-    <Card className="flashcardSet" key={flashcardSet.id}>
+    <Card className="mb-6" key={flashcardSet.id}>
       <CardHeader>
         <CardTitle>{flashcardSet.name}</CardTitle>
         <CardDescription>{flashcardSet.description}</CardDescription>
