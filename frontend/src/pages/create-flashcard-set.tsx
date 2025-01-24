@@ -12,6 +12,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner"
 import { Toaster } from "@/components/ui/sonner"
+import { Checkbox } from "@/components/ui/checkbox";
+import { Save, SquarePlus, Trash } from "lucide-react";
 
 export default function CreateFlashcardSetPage() {
   const [flashcards, setFlashcards] = useState([
@@ -20,7 +22,7 @@ export default function CreateFlashcardSetPage() {
   const [setName, setSetName] = useState("");
   const [categoryName, setCategoryName] = useState("");
   const [description, setDescription] = useState("");
-  const [isPublic, setIsPublic] = useState(false);
+  const [isPublic, setIsPublic] = useState(true);
 
   const handleFlashcardChange = (
     index: number,
@@ -133,15 +135,16 @@ export default function CreateFlashcardSetPage() {
                       type="text"
                     />
                   </CardDescription>
-                  <div className="flex items-center gap-2">
-                    <Label htmlFor="isPublic">Public</Label>
-                    <input
-                      id="isPublic"
-                      type="checkbox"
-                      checked={isPublic}
-                      onChange={(e) => setIsPublic(e.target.checked)}
-                    />
-                  </div>
+                  <CardTitle>
+                    <div className="flex items-center gap-2">
+                      <Label htmlFor="isPublic">Public: </Label>
+                      <Checkbox 
+                        id="isPublic" 
+                        checked={isPublic}
+                        onCheckedChange={(e) => setIsPublic(Boolean(e.valueOf))}
+                      />
+                    </div>
+                  </CardTitle>
                 </CardHeader>
               </Card>
 
