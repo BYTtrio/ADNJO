@@ -51,7 +51,7 @@ const Navbar = () => {
                     variant: "ghost",
                   }),
                 )}
-                href="#"
+                href="/trophies"
               >
                 <span className="text-base">My Trophies</span>
               </a>
