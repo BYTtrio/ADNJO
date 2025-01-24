@@ -132,8 +132,7 @@ const Navbar = () => {
                 </div>
                 <div className="border-t pt-4">
                   <div className="mt-2 flex flex-col gap-3">
-                    <Button variant="outline" onClick={() => navigate("/login")}>Log in</Button>
-                    <Button onClick={() => navigate("/register")}>Sign up</Button>
+                    <Button variant="outline" onClick={() => navigate("/login")}>Log out<LogOut /></Button>
                     <ModeToggle/>
                   </div>
                 </div>

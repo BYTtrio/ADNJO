@@ -12,6 +12,13 @@ export function LoginForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
+  const navigate = useNavigate();
+  const handleSubmit = () => {
+    navigate("/");
+  };
+  useEffect(() => {
+    toast("Account created succesfully!");
+  }, []);
   return (
     <>
       <Toaster />
