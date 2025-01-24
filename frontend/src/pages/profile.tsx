@@ -1,10 +1,12 @@
 import Navbar from "@/components/navbar";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Spinner } from "@/components/ui/spinner";
 import User from "@/interfaces/user";
 import { format } from "date-fns/format";
+import { Pen, RotateCcw, Trash } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function ProfilePage() {
@@ -25,12 +27,13 @@ export default function ProfilePage() {
             <div className="flex flex-col gap-6">
               <div className="flex flex-col">
                 <h1 className="text-2xl font-bold">Profile</h1>
+                <br />
                 <p><b>Total points: </b>{userData.totalPoints}</p>
                 <p><b>Account last updated at: </b>{format(userData.updatedAt, "PPP")}</p>
                 <p><b>Account created at: </b>{format(userData.createdAt, "PPP")}</p>
               </div>
               <div className="grid gap-2">
-                <Label htmlFor="email">Your email</Label>
+                <Label htmlFor="email">Email</Label>
                 <Input
                   id="email"
                   type="email"
@@ -40,7 +43,7 @@ export default function ProfilePage() {
               </div>
               <div className="grid gap-2">
                 <div className="flex items-center">
-                  <Label htmlFor="username">Your username</Label>
+                  <Label htmlFor="username">Username</Label>
                 </div>
                 <Input 
                   id="username"
@@ -49,11 +52,10 @@ export default function ProfilePage() {
                   required />
               </div>
               <Button type="submit" className="w-full">
-                Update account
+                Update account <Pen />
               </Button>
-              <Button>Reset password</Button>
-              <Button>Log out</Button>
-              <Button>Delete account</Button>
+              <Button>Reset password <RotateCcw /></Button>
+              <Button>Delete account <Trash /></Button>
             </div>
           </form>
       </CardContent>

@@ -24,7 +24,7 @@ export default function FlashcardSetPage() {
   return (
     <>
       <Navbar />
-      <div className="flex justify-center">
+      <div className="max-md:overflow-hidden w-full md:w-3/4 lg:w-1/3 mx-auto">
         <FlashcardArray
           cards = {cards}
           cycle = {true}
@@ -33,14 +33,20 @@ export default function FlashcardSetPage() {
             color: 'hsl(var(--background))',
             textAlign: 'center',
             display: 'grid',
-            placeItems: 'center'
+            placeItems: 'center',
+            fontSize: '1.5rem'
           }}
           backContentStyle={{
             backgroundColor: 'hsl(var(--foreground))',
             color: 'hsl(var(--background))',
             textAlign: 'center',
             display: 'grid',
-            placeItems: 'center'
+            placeItems: 'center',
+            fontSize: '1.5rem'
+          }}
+          FlashcardArrayStyle = {{
+            height: '87vh',
+            width: '100%'
           }}
         />
       </div>

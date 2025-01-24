@@ -99,11 +99,10 @@ export default function CreateFlashcardSetPage() {
       <Navbar />
       <Toaster />
       <div className="flex justify-center">
-        <div className="m-4 w-full max-w-3xl">
-          <form className="p-6 md:p-8">
+        <div className="w-full max-w-3xl">
+          <form className="p-6 md:p-8 pt-0">
             <div className="flex flex-col gap-6">
-              <h2 className="text-4xl text-center">Create Flashcards</h2>
-
+              <h2 className="text-3xl text-center">Create a new flashcard set</h2>
               <Card>
                 <CardHeader className="gap-2">
                   <CardTitle>Name</CardTitle>
@@ -113,6 +112,7 @@ export default function CreateFlashcardSetPage() {
                       onChange={(e) => setSetName(e.target.value)}
                       id="name"
                       type="text"
+                      placeholder="Enter a title, like “Evolution - Chapter 22“"
                       required
                     />
                   </CardDescription>
@@ -123,6 +123,7 @@ export default function CreateFlashcardSetPage() {
                       onChange={(e) => setCategoryName(e.target.value)}
                       id="category"
                       type="text"
+                      placeholder="Enter a category, like “Biology“"
                       required
                     />
                   </CardDescription>
@@ -133,6 +134,7 @@ export default function CreateFlashcardSetPage() {
                       onChange={(e) => setDescription(e.target.value)}
                       id="description"
                       type="text"
+                      placeholder="Add a description..."
                     />
                   </CardDescription>
                   <CardTitle>
@@ -147,7 +149,6 @@ export default function CreateFlashcardSetPage() {
                   </CardTitle>
                 </CardHeader>
               </Card>
-
               {flashcards.map((flashcard, index) => (
                 <Card key={index}>
                   <CardHeader>
@@ -159,7 +160,7 @@ export default function CreateFlashcardSetPage() {
                       <Input
                         id={`term-${index}`}
                         type="text"
-                        placeholder="Front of card"
+                        placeholder="Enter term"
                         value={flashcard.term}
                         onChange={(e) =>
                           handleFlashcardChange(index, "term", e.target.value)
@@ -172,7 +173,7 @@ export default function CreateFlashcardSetPage() {
                       <Input
                         id={`definition-${index}`}
                         type="text"
-                        placeholder="Back of card"
+                        placeholder="Enter Definition"
                         value={flashcard.definition}
                         onChange={(e) =>
                           handleFlashcardChange(index, "definition", e.target.value)
@@ -182,17 +183,18 @@ export default function CreateFlashcardSetPage() {
                     </div>
                     <Button variant="destructive" onClick={() => removeFlashcard(index)}>
                       Delete Flashcard
+                      <Trash />
                     </Button>
                   </CardContent>
                 </Card>
               ))}
-
               <Button type="button" onClick={addFlashcard}>
-                Add Flashcard
+                Add a card
+                <SquarePlus />
               </Button>
-
               <Button type="button" onClick={handleSubmit}>
                 Save Flashcard Set
+                <Save />
               </Button>
             </div>
           </form>

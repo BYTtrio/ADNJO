@@ -1,21 +1,22 @@
-import { Menu } from "lucide-react";
+import { House, ListOrdered, LogOut, Menu, SquarePlus, Trophy, User } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
 import { useNavigate } from "react-router-dom";
+import logo from "@/assets/fishkey-logo-blue-trim.png";
 
 const Navbar = () => {
   const navigate = useNavigate();
   return (
     <section className="py-4">
       <div className="container max-w-full">
-        <nav className="hidden justify-between lg:flex mx-4">
+        <nav className="hidden justify-between lg:flex mx-6">
           <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2">
-              <img src="https://images.vexels.com/media/users/3/142789/isolated/lists/2bfb04ad814c4995f0c537c68db5cd0b-multicolor-swirls-circle-logo.png" className="w-8" alt="logo" />
-              <span className="text-2xl font-bold">Andjo</span>
+            <div className="flex items-center gap-1.5">
+              <img src={logo} className="w-7" alt="logo" />
+              <span className="text-3xl font-bold">Fishkey</span>
             </div>
             <div className="flex items-center">
               <a
@@ -29,6 +30,7 @@ const Navbar = () => {
                 )}
                 href="/"
               >
+                <House />
                 <span className="text-base">Home</span>
               </a>
               <a
@@ -41,6 +43,7 @@ const Navbar = () => {
                 )}
                 href="/flashcards/create"
               >
+                <SquarePlus />
                 <span className="text-base">Create flashcards</span>
               </a>
               <a
@@ -53,6 +56,7 @@ const Navbar = () => {
                 )}
                 href="/trophies"
               >
+                <Trophy />
                 <span className="text-base">My Trophies</span>
               </a>
               <a
@@ -65,21 +69,34 @@ const Navbar = () => {
                 )}
                 href="/leaderboard"
               >
+                <ListOrdered />
                 <span className="text-base">Leaderboard</span>
               </a>
             </div>
           </div>
           <div className="flex gap-2 justify-end">
-            <Button variant="outline" onClick={() => navigate("/login")}>Log in</Button>
-            <Button onClick={() => navigate("/register")}>Sign up</Button>
+            <a
+              className={cn(
+                "text-muted-foreground",
+                navigationMenuTriggerStyle,
+                buttonVariants({
+                  variant: "ghost",
+                }),
+              )}
+              href="/profile"
+            >
+              <User />
+              <span className="text-base">My profile</span>
+            </a>
+            <Button variant="outline" onClick={() => navigate("/login")}>Log out<LogOut /></Button>
             <ModeToggle/>
           </div>
         </nav>
         <div className="block lg:hidden">
           <div className="flex items-center justify-between mx-4">
-            <div className="flex items-center gap-2">
-              <img src="https://images.vexels.com/media/users/3/142789/isolated/lists/2bfb04ad814c4995f0c537c68db5cd0b-multicolor-swirls-circle-logo.png" className="w-8" alt="logo" />
-              <span className="text-xl font-bold">Andjo</span>
+            <div className="flex items-center gap-1.5">
+              <img src={logo} className="w-7" alt="logo" />
+              <span className="text-3xl font-bold">Fishkey</span>
             </div>
             <Sheet>
               <SheetTrigger asChild>
@@ -90,9 +107,9 @@ const Navbar = () => {
               <SheetContent className="overflow-y-auto">
                 <SheetHeader>
                   <SheetTitle>
-                    <div className="flex items-center gap-2">
-                      <img src="https://images.vexels.com/media/users/3/142789/isolated/lists/2bfb04ad814c4995f0c537c68db5cd0b-multicolor-swirls-circle-logo.png" className="w-8" alt="logo" />
-                      <span className="text-xl font-bold">Andjo</span>
+                    <div className="flex items-center gap-1.5">
+                      <img src={logo} className="w-7" alt="logo" />
+                      <span className="text-3xl font-bold">Fishkey</span>
                     </div>
                   </SheetTitle>
                 </SheetHeader>
@@ -108,6 +125,9 @@ const Navbar = () => {
                   </a>
                   <a href="/leaderboard" className="font-semibold">
                     Leaderboard
+                  </a>
+                  <a href="/profile" className="font-semibold">
+                    My profile
                   </a>
                 </div>
                 <div className="border-t pt-4">

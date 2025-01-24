@@ -72,15 +72,15 @@ const Chatbot = () => {
 
   const getAvatarSrc = (variant: "sent" | "received") => {
     if (variant === "sent") {
-      return "https://i.redd.it/no-spoilers-arcane-viktor-illustration-icon-i-made-v0-xplol0iummmb1.jpg?width=1920&format=pjpg&auto=webp&s=3ab95a0570cdfd30494fa093abb63b943bc73c50";
+      return "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXVzZXIiPjxwYXRoIGQ9Ik0xOSAyMXYtMmE0IDQgMCAwIDAtNC00SDlhNCA0IDAgMCAwLTQgNHYyIi8+PGNpcmNsZSBjeD0iMTIiIGN5PSI3IiByPSI0Ii8+PC9zdmc+";
     }
-    return "https://i1.sndcdn.com/artworks-000316472301-vutf6s-t1080x1080.jpg";
+    return "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWJvdCI+PHBhdGggZD0iTTEyIDhWNEg4Ii8+PHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjEyIiB4PSI0IiB5PSI4IiByeD0iMiIvPjxwYXRoIGQ9Ik0yIDE0aDIiLz48cGF0aCBkPSJNMjAgMTRoMiIvPjxwYXRoIGQ9Ik0xNSAxM3YyIi8+PHBhdGggZD0iTTkgMTN2MiIvPjwvc3ZnPg==";
   };
 
   return (
     <ExpandableChat size="lg" position="bottom-right">
       <ExpandableChatHeader className="flex-col text-center justify-center">
-        <h1 className="text-xl font-semibold">Chat with Bot 🤖</h1>
+        <h1 className="text-xl font-semibold">Chat with our Bot 🤖</h1>
         <p>Ask any question for our AI to answer</p>
       </ExpandableChatHeader>
       <ExpandableChatBody>
@@ -94,7 +94,7 @@ const Chatbot = () => {
           {isLoading && (
             <ChatBubble variant="received">
               <ChatBubbleAvatar src={getAvatarSrc("received")}/>
-              <ChatBubbleMessage>Bot is typing...</ChatBubbleMessage>
+              <ChatBubbleMessage isLoading={isLoading}></ChatBubbleMessage>
             </ChatBubble>
           )}
         </ChatMessageList>

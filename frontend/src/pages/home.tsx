@@ -7,6 +7,7 @@ import Navbar from '@/components/navbar'
 import '@/index.css'
 import { format } from "date-fns"
 import { useNavigate } from 'react-router-dom'
+import { Eye, GraduationCap } from 'lucide-react'
 
 export default function HomePage() {
   const [flashcardSetData, setFlashcardSetData] = useState<FlashcardSet[]>([])
@@ -51,8 +52,8 @@ export default function HomePage() {
         <p><b>Created: </b>{format(flashcardSet.createdAt as string, "PPP")}</p>
       </CardContent>
       <CardFooter>
-        <Button onClick={() => handleClick(flashcardSet.id)}>Preview</Button>
-        <Button  onClick={() => navigate("/flashcards/" + flashcardSet.id)}>Learn</Button>
+        <Button className='max-lg:w-full' onClick={() => handleClick(flashcardSet.id)}>Preview <Eye /></Button>
+        <Button className='max-lg:w-full' onClick={() => navigate("/flashcards/" + flashcardSet.id)}>Learn <GraduationCap /></Button>
       </CardFooter>
     </Card>
   )
@@ -60,9 +61,11 @@ export default function HomePage() {
   return (
     <div className=''>
       <Navbar />
-      <div className='flex flex-row justify-center'>
-        <div className='container left basis-2/3'>{flashcardSets}</div>
-        <div className='container right basis-1/3'>{Flashcards}</div>
+      <div className="mx-auto flex max-w-6xl flex-col flex-wrap items-start justify-center gap-6 p-6 sm:flex-row sm:p-8 pt-0">
+        <div className="grid w-full gap-6 sm:grid-cols-2 ">
+            <div className=''>{flashcardSets}</div>
+            <div className=''>{Flashcards}</div>
+        </div>
       </div>
     </div>
   )
