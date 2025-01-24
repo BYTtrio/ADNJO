@@ -59,7 +59,7 @@ export default function ProfilePage() {
       </CardContent>
     </Card>
   ) : (
-    <p>Loading user data...</p>
+    <Spinner size="large"/>
   );
 
   return (
